@@ -1,0 +1,16 @@
+# m h  dom mon dow   command
+# to see a list of available variables, see app/lib/scripts/paths.sh
+# when you add a new variable, make sure it's getting properly replaced
+# this is done in the app/update.sh script
+
+# every 5 minutes, check for failed logins
+*/5 * * * *             /var/www/mediatracker/app/bin/cron_failed_logins.sh >> /var/www/mediatracker/app/tmp/logs/cron_failed_logins.log
+*/5 * * * *             /var/www/mediatracker/app/bin/cron_change_log.sh >> /var/www/mediatracker/app/tmp/logs/cron_change_log.log
+*/5 * * * *             /var/www/naccess/app/bin/cron_failed_logins.sh >> /var/www/naccess/app/tmp/logs/cron_failed_logins.log
+*/5 * * * *             /var/www/naccess/app/bin/cron_change_log.sh >> /var/www/naccess/app/tmp/logs/cron_change_log.log
+00 * * * *              /var/www/naccess/app/bin/cron_review_state_emails.sh >>  /var/www/naccess/app/tmp/logs/cron_review_state_emails.log
+00 * * * *              /var/www/mediatracker/app/bin/cron_send_open_media_emails.sh >> /var/www/mediatracker/app/tmp/logs/cron_send_open_media_emails.log
+
+## Validation Errors digest emails
+40 * * * *              /var/www/mediatracker/plugins/utilities/bin/cron_validation_errors.sh >> /var/www/mediatracker/app/tmp/logs/cron_validation_errors.log
+40 * * * *              /var/www/naccess/plugins/utilities/bin/cron_validation_errors.sh >> /var/www/naccess/app/tmp/logs/cron_validation_errors.log
