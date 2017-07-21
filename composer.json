@@ -3,7 +3,7 @@
 	"description": "Portal: NAC-CESS",
 	"type": "project",
 	"keywords": ["project", "application", "naccess"],
-	"license": "MIT",
+	"license": "mit",
 	"authors": [
 		{
 			"name": "Brian French",
