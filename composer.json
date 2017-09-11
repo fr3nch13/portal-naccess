@@ -1,5 +1,5 @@
 {
-	"name": "nih-fo/portal-naccess",
+	"name": "fr3nch13/portal-naccess",
 	"description": "Portal: NAC-CESS",
 	"type": "project",
 	"keywords": ["project", "application", "naccess"],
@@ -17,8 +17,8 @@
 	"minimum-stability" : "dev",
 	"prefer-stable" : true,
 	"require": {
-		"nih-fo/plugin-utilities": "1.*",
-		"nih-fo/plugin-php-excel": "1.*"
+		"fr3nch13/plugin-utilities": "1.*",
+		"fr3nch13/plugin-php-excel": "1.*"
 	}, 
 	"config": {
 		"vendor-dir": "Vendor/",
